@@ -1,0 +1,29 @@
+a {
+  text-decoration: none;
+  color: #000;
+}
+.logo {
+  background-color: unset;
+}
+.links a.active,
+.mobile-links a.active {
+  background-color: #6f41c6;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.menu {
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  height: calc(100vh - 50px);
+  transition: all 0.3s ease-in-out;
+}
+.menu-none {
+  display: none;
+  transition: all 0.3s ease-in-out;
+}

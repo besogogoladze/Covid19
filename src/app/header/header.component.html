@@ -1,0 +1,90 @@
+<main class="header-content">
+  <div class="container">
+    <h1 class="text-center">
+      <a
+        class="logo"
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Covid 19</a
+      >
+    </h1>
+    <div class="links">
+      <ul>
+        <li>
+          <a
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Accueil</a
+          >
+        </li>
+        <li>
+          <a routerLink="/symptomes" routerLinkActive="active">Symptomes</a>
+        </li>
+        <li>
+          <a routerLink="/blog" routerLinkActive="active">Blog</a>
+        </li>
+        <li>
+          <a routerLink="/contact" routerLinkActive="active">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</main>
+<main class="mobile-header-content">
+  <div class="container">
+    <button (click)="toggleMenu()">
+      🍔
+    </button>
+
+    <div [ngClass]="isMenuVisible ? 'menu' : 'menu-none'">
+      <h1 class="text-center">
+        <a
+          class="logo"
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Covid 19</a
+        >
+      </h1>
+      <div class="mobile-links">
+        <ul>
+          <li>
+            <a
+              routerLink="/"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              (click)="toggleMenu()"
+              >Accueil</a
+            >
+          </li>
+          <li>
+            <a
+              (click)="toggleMenu()"
+              routerLink="/symptomes"
+              routerLinkActive="active"
+              >Symptomes</a
+            >
+          </li>
+          <li>
+            <a
+              (click)="toggleMenu()"
+              routerLink="/blog"
+              routerLinkActive="active"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a
+              (click)="toggleMenu()"
+              routerLink="/contact"
+              routerLinkActive="active"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>
